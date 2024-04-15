@@ -1,1 +1,3 @@
-*.ipynb linguist-language=Python
+*.ipynb linguist-language=Ignore
+
+# *.ipynb linguist-language=Python
