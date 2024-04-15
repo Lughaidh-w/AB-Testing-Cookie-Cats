@@ -7,18 +7,31 @@ import seaborn as sns
 
 
 
+basic_colour = sns.xkcd_rgb['deep red']
 
 # takes a series
-def basic_histo(data, , **kwargs):
-    plt.figure(figsize=(5, 5))
-    sns.histplot(data, **kwargs)
+def basic_histo(data, colour=basic_colour, **kwargs):
+    plt.figure(figsize=(6, 4))
+    sns.histplot(data, color=colour, **kwargs)
     
-
     plt.xlabel('Values')
     plt.ylabel('Frequency')
 
     plot_title=data.name
-    plt.title(f'Histogram of {plot_title}')
+    plt.title(f'Distribution of {plot_title}')
 
+    plt.show()
+
+
+# takes a series
+def basic_boxplot(data, colour=basic_colour, **kwargs):
+    plt.figure(figsize=(8, 6))  
+    sns.boxplot(data=data, color=colour, **kwargs)
+
+    plt.xlabel('Values')
+    plt.ylabel('Frequency')
+
+    plot_title = data.name
+    plt.title(f'Boxplot of {plot_title}')
 
     plt.show()
